@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 1.5rem 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.soundCard {
+  background: var(--linen);
+  border: 1.5px solid var(--mist);
+  border-radius: var(--radius-lg);
+  padding: 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.soundCard:hover {
+  border-color: var(--sage);
+  background: var(--cloud);
+}
+
+.soundCardActive {
+  background: var(--moss);
+  border-color: var(--moss);
+  color: var(--cloud);
+}
+
+.soundIcon {
+  font-size: 1.6rem;
+  transition: transform 0.2s;
+}
+
+.soundCard:hover .soundIcon { transform: scale(1.1); }
+
+.soundLabel {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bark);
+  transition: color 0.2s;
+}
+
+.soundCardActive .soundLabel { color: var(--cloud); }
+
+.volumeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--sage);
+  font-size: 0.8rem;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 140px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--mist);
+  outline: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--moss);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+.note {
+  font-size: 0.78rem;
+  color: var(--fern);
+  text-align: center;
+  max-width: 300px;
+  line-height: 1.65;
+}
+
+.wave {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  height: 24px;
+}
+
+.waveBar {
+  width: 3px;
+  background: var(--sage);
+  border-radius: 2px;
+  animation: wavePulse 1.2s ease-in-out infinite;
+}
+
+@keyframes wavePulse {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+.nowPlaying {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--sage);
+}

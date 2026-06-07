@@ -1,0 +1,164 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.circleWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 280px;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid var(--mist);
+  opacity: 0.4;
+  transition: all 0.1s;
+}
+
+.ring1 { width: 100%; height: 100%; }
+.ring2 { width: 75%; height: 75%; border-color: var(--fern); }
+.ring3 { width: 50%; height: 50%; border-color: var(--sage); }
+
+.circle {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: var(--cloud);
+  border: 3px solid var(--fern);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.05s;
+  box-shadow: 0 0 0 0 rgba(122,140,110,0.0);
+  user-select: none;
+  gap: 6px;
+}
+
+.circle:hover {
+  background: var(--linen);
+}
+
+.phaseIcon {
+  font-size: 2rem;
+  color: var(--moss);
+  transition: transform 0.3s;
+}
+
+.phaseText {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+.timer {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--stone);
+  line-height: 1;
+}
+
+.timerSub {
+  font-size: 0.65rem;
+  color: var(--fern);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-round);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+}
+
+.btnPrimary {
+  background: var(--moss);
+  color: var(--cloud);
+}
+.btnPrimary:hover { background: var(--stone); }
+
+.btnSecondary {
+  background: transparent;
+  color: var(--sage);
+  border: 1.5px solid var(--mist);
+}
+.btnSecondary:hover { border-color: var(--sage); color: var(--moss); }
+
+.patternRow {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.patternBtn {
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-round);
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--linen);
+  color: var(--bark);
+  border: 1.5px solid var(--mist);
+  transition: all 0.2s;
+}
+
+.patternBtn:hover { border-color: var(--sage); }
+.patternBtnActive {
+  background: var(--moss);
+  color: var(--cloud);
+  border-color: var(--moss);
+}
+
+.sessionInfo {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--stone);
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  color: var(--sage);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.guide {
+  font-size: 0.8rem;
+  color: var(--fern);
+  text-align: center;
+  max-width: 260px;
+  line-height: 1.7;
+}

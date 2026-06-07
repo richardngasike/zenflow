@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem 1rem;
+}
+
+.canvas {
+  width: 100%;
+  max-width: 600px;
+  height: 360px;
+  border-radius: var(--radius-xl);
+  background: var(--linen);
+  border: 1.5px solid var(--mist);
+  cursor: crosshair;
+  touch-action: none;
+  display: block;
+}
+
+.controls {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.colorRow {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.colorSwatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+.colorSwatch:hover { transform: scale(1.15); }
+.swatchActive { border-color: var(--stone) !important; transform: scale(1.1); }
+
+.sizeRow {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.sizeBtn {
+  border-radius: 50%;
+  cursor: pointer;
+  background: var(--bark);
+  border: none;
+  transition: transform 0.15s, opacity 0.15s;
+  opacity: 0.35;
+}
+
+.sizeBtn:hover { opacity: 0.7; }
+.sizeBtnActive { opacity: 1 !important; }
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius-round);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btnClear {
+  background: transparent;
+  color: var(--terracotta);
+  border: 1.5px solid rgba(181,96,74,0.35);
+}
+.btnClear:hover { background: rgba(181,96,74,0.08); border-color: var(--terracotta); }
+
+.btnEraser {
+  background: transparent;
+  color: var(--sage);
+  border: 1.5px solid var(--mist);
+}
+.btnEraser:hover { border-color: var(--sage); }
+.btnEraserActive { background: var(--cloud); border-color: var(--moss); color: var(--moss); }
+
+.hint {
+  font-size: 0.78rem;
+  color: var(--fern);
+  text-align: center;
+}
+
+.toolIcon { font-size: 0.95rem; }

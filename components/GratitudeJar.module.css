@@ -1,0 +1,144 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.jar {
+  position: relative;
+  width: 160px;
+  height: 200px;
+}
+
+.jarSvg {
+  width: 100%;
+  height: 100%;
+}
+
+.noteCount {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--amber);
+  font-weight: 600;
+}
+
+.inputWrap {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--mist);
+  background: var(--linen);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--stone);
+  resize: none;
+  line-height: 1.6;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.textarea::placeholder { color: var(--fern); }
+.textarea:focus { border-color: var(--sage); }
+
+.addBtn {
+  align-self: flex-end;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-round);
+  background: var(--amber);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.addBtn:hover { background: var(--sand); color: var(--stone); }
+.addBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.notesList {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.note {
+  background: var(--warm);
+  border: 1.5px solid var(--mist);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  animation: slideIn 0.25s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.noteText {
+  font-size: 0.84rem;
+  color: var(--stone);
+  line-height: 1.55;
+  flex: 1;
+}
+
+.noteDate {
+  font-size: 0.68rem;
+  color: var(--fern);
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--mist);
+  font-size: 0.9rem;
+  padding: 2px;
+  transition: color 0.15s;
+  line-height: 1;
+}
+.removeBtn:hover { color: var(--terracotta); }
+
+.emptyNote {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--fern);
+  padding: 1.5rem 0;
+}
+
+.prompt {
+  font-size: 0.78rem;
+  color: var(--sage);
+  font-style: italic;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.25rem 0;
+}
+.prompt:hover { color: var(--moss); }

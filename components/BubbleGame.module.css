@@ -1,0 +1,187 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--stone);
+}
+
+.statLabel {
+  font-size: 0.68rem;
+  color: var(--sage);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.arena {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 380px;
+  background: var(--linen);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1.5px solid var(--mist);
+  cursor: crosshair;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  animation: floatUp linear forwards;
+  user-select: none;
+}
+
+.bubble:hover {
+  transform: scale(1.08);
+}
+
+.bubbleInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.bubbleIcon {
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+
+.bubble:hover .bubbleIcon {
+  opacity: 1;
+}
+
+.pop {
+  pointer-events: none;
+  animation: popOut 0.35s ease forwards;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0) scale(1); }
+  to   { transform: translateY(-420px) scale(0.85); }
+}
+
+@keyframes popOut {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.6; }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-round);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+}
+
+.btnPrimary {
+  background: var(--moss);
+  color: var(--cloud);
+}
+.btnPrimary:hover { background: var(--stone); }
+
+.btnSecondary {
+  background: transparent;
+  color: var(--sage);
+  border: 1.5px solid var(--mist);
+}
+.btnSecondary:hover { border-color: var(--sage); color: var(--moss); }
+
+.diffRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.diffBtn {
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-round);
+  font-size: 0.72rem;
+  font-weight: 500;
+  background: var(--linen);
+  color: var(--bark);
+  border: 1.5px solid var(--mist);
+  transition: all 0.2s;
+}
+.diffBtn:hover { border-color: var(--sage); }
+.diffBtnActive { background: var(--terracotta); color: #fff; border-color: var(--terracotta); }
+
+.idle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 0.75rem;
+  color: var(--sage);
+}
+
+.idleIcon {
+  font-size: 3rem;
+  color: var(--mist);
+}
+
+.idleText {
+  font-size: 0.85rem;
+  color: var(--fern);
+  letter-spacing: 0.05em;
+}
+
+.moodNote {
+  font-size: 0.78rem;
+  color: var(--fern);
+  text-align: center;
+  max-width: 280px;
+}
+
+.scorePopup {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--moss);
+  font-weight: 600;
+  pointer-events: none;
+  animation: scoreFloat 0.8s ease forwards;
+  z-index: 10;
+}
+
+@keyframes scoreFloat {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-30px); }
+}

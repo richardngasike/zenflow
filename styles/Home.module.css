@@ -1,0 +1,245 @@
+.page {
+  min-height: 100vh;
+  background: var(--warm);
+}
+
+/* HEADER */
+.header {
+  padding: 2rem 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logoIcon {
+  font-size: 1.6rem;
+  color: var(--moss);
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--stone);
+}
+
+.tagline {
+  font-size: 0.75rem;
+  color: var(--fern);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 2.5rem 1.5rem 2rem;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 500;
+  color: var(--stone);
+  line-height: 1.15;
+  margin-bottom: 0.85rem;
+}
+
+.heroTitle em {
+  font-style: italic;
+  color: var(--sage);
+}
+
+.heroSub {
+  font-size: 0.9rem;
+  color: var(--fern);
+  line-height: 1.7;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* MOOD BANNER */
+.moodBanner {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 1rem 2rem;
+}
+
+.moodTag {
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-round);
+  background: var(--linen);
+  border: 1.5px solid var(--mist);
+  font-size: 0.75rem;
+  color: var(--bark);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.moodTag:hover { border-color: var(--sage); color: var(--moss); }
+
+.moodTagActive {
+  background: var(--moss);
+  color: var(--cloud);
+  border-color: var(--moss);
+}
+
+/* MAIN */
+.main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-round);
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: var(--linen);
+  color: var(--bark);
+  border: 1.5px solid var(--mist);
+  transition: all 0.2s;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+
+.tab:hover { border-color: var(--sage); color: var(--moss); }
+
+.tabActive {
+  background: var(--stone);
+  color: var(--cloud);
+  border-color: var(--stone);
+}
+
+.tabIcon { font-size: 1rem; }
+
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--mist);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.cardHeader {
+  padding: 1.5rem 2rem 1rem;
+  border-bottom: 1.5px solid var(--linen);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--stone);
+  font-weight: 500;
+}
+
+.cardDesc {
+  font-size: 0.78rem;
+  color: var(--fern);
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+.cardBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  background: var(--linen);
+  border-radius: var(--radius-round);
+  font-size: 0.7rem;
+  color: var(--sage);
+  white-space: nowrap;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.75rem;
+  color: var(--fern);
+  border-top: 1px solid var(--mist);
+}
+
+.divider {
+  width: 60px;
+  height: 1.5px;
+  background: var(--mist);
+  margin: 2rem auto;
+  border-radius: 1px;
+}
+
+/* AFFIRMATION */
+.affirmation {
+  background: var(--linen);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  border: 1.5px solid var(--mist);
+  transition: border-color 0.2s;
+}
+
+.affirmation:hover { border-color: var(--sage); }
+
+.affirmIcon { font-size: 1.5rem; color: var(--sage); flex-shrink: 0; }
+
+.affirmText {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--bark);
+  line-height: 1.5;
+}
+
+.affirmHint { font-size: 0.65rem; color: var(--fern); letter-spacing: 0.08em; margin-top: 2px; }
+
+@media (max-width: 600px) {
+  .header { padding: 1.25rem 1rem 0.75rem; }
+  .tabs { gap: 0.4rem; }
+  .tab { padding: 0.5rem 0.9rem; font-size: 0.77rem; }
+  .cardHeader { padding: 1.25rem 1.25rem 0.75rem; }
+}
